@@ -9,6 +9,11 @@ public class Contact {
 		email = new String();
 	}//End constructor
 	
+	public Contact(String n, String e){
+		name = n;
+		email = e;
+	}//End constructor
+	
 	public void setName(String name){
 		this.name = name;
 	}//End setName.
