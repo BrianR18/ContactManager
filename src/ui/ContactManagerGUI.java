@@ -69,7 +69,7 @@ public class ContactManagerGUI {
 	private void initializeContactList(){
 		ObservableList<Contact> contactList = FXCollections.observableArrayList(contacts.getContacts());
 		table.setItems(contactList);
-		 name.setCellValueFactory(new PropertyValueFactory<>("name"));
-		 name.setCellValueFactory(new PropertyValueFactory<>("email"));
+		 name.setCellValueFactory(new PropertyValueFactory<Contact,String>("name"));
+		 email.setCellValueFactory(new PropertyValueFactory<Contact,String>("email"));
 	}//End initializaContactList
 }//End ContactManagerGUI
