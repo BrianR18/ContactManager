@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="517.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="193.0" layoutY="72.0" prefHeight="26.0" prefWidth="103.0" text="Add contact">
@@ -14,8 +13,8 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Label>
-      <TextField layoutX="193.0" layoutY="125.0" />
-      <TextField layoutX="193.0" layoutY="163.0" />
+      <TextField fx:id="tfName" layoutX="193.0" layoutY="125.0" />
+      <TextField fx:id="tfEmail" layoutX="193.0" layoutY="163.0" />
       <Label layoutX="123.0" layoutY="128.0" prefHeight="17.0" prefWidth="42.0" text="Name:">
          <font>
             <Font name="System Bold" size="13.0" />
@@ -26,7 +25,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Button layoutX="233.0" layoutY="207.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #33CEFF;" text="Save">
+      <Button layoutX="233.0" layoutY="207.0" mnemonicParsing="false" onAction="#saveContact" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #33CEFF;" text="Save">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
