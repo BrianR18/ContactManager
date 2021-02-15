@@ -2,6 +2,8 @@ package ui;
 
 import model.ContactManager;
 import model.Contact;
+
+import java.io.File;
 import java.io.IOException;
 
 import javafx.collections.FXCollections;
@@ -17,6 +19,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 
 public class ContactManagerGUI {
 	@FXML private Pane mainPane;
@@ -55,14 +58,13 @@ public class ContactManagerGUI {
 			tfName.setText("");
 			tfEmail.setText("");
 			info.setAlertType(AlertType.INFORMATION);
-			info.setHeaderText(null);
-			info.setContentText("The contact has been succefully.");
+			info.setContentText("The contact has been added successfully.");
 		}//End if
 		else {
 			info.setAlertType(AlertType.ERROR);
-			info.setHeaderText(null);
-			info.setContentText("Error. The fields are void.");
+			info.setContentText("Error, the fields are void.");
 		}//End else
+		info.setHeaderText(null);
 		info.showAndWait();
 	}//End saveContact
 	
@@ -72,4 +74,17 @@ public class ContactManagerGUI {
 		 name.setCellValueFactory(new PropertyValueFactory<Contact,String>("name"));
 		 email.setCellValueFactory(new PropertyValueFactory<Contact,String>("email"));
 	}//End initializaContactList
+	@FXML
+	public void importData(){
+		
+	}
+	@FXML
+	public void exportData(){
+		
+	}//End exportData
+	
+	private File chooseFile(){
+		FileChooser file = new FileChooser();
+		
+	}//End chooseFile
 }//End ContactManagerGUI

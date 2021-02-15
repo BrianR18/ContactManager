@@ -24,6 +24,7 @@ public class Main extends Application{
 		window.setTitle("Contact Manager");
 		window.setScene(scene);
 		window.show();
+		CMG.showSceneAddContact(null);
 	}//End start
 
 }
