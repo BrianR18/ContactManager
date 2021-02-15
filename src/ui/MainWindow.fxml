@@ -14,6 +14,8 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#showSceneAddContact" text="Add contact" />
                   <MenuItem mnemonicParsing="false" onAction="#showSceneContactList" text="List contact" />
+                  <MenuItem mnemonicParsing="false" onAction="#importData" text="Import data" />
+                  <MenuItem mnemonicParsing="false" onAction="#exportData" text="Export data" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

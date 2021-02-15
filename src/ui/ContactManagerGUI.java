@@ -76,15 +76,37 @@ public class ContactManagerGUI {
 	}//End initializaContactList
 	@FXML
 	public void importData(){
-		
-	}
+		File file = chooseimportFile();
+		if(file != null) {
+			try {
+				contacts.importContactData(file);
+				initializeContactList();
+			}catch(IOException e){
+				System.out.println("Tremendo error y ni idea que paso");
+			}
+		}//End if
+	}//End importData
 	@FXML
 	public void exportData(){
-		
+		File file = saveFile();
+		if(file != null) {
+			try {
+				contacts.exportContactData(file);
+			}catch(IOException e){
+				System.out.println("Tremendo error y ni idea que paso");
+			}
+		}//End if
 	}//End exportData
 	
-	private File chooseFile(){
-		FileChooser file = new FileChooser();
-		
+	private File chooseimportFile(){
+		FileChooser filepath = new FileChooser();
+		File file = filepath.showOpenDialog(mainPane.getScene().getWindow());
+		return file;
+	}//End chooseFile
+	private File saveFile(){
+		FileChooser filepath = new FileChooser();
+		filepath.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("TXT","*.txt"));
+		File file = filepath.showSaveDialog(mainPane.getScene().getWindow());
+		return file;
 	}//End chooseFile
 }//End ContactManagerGUI
